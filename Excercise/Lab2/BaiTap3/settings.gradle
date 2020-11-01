@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "BaiTap3"
+rootProject.name = "My Application"
