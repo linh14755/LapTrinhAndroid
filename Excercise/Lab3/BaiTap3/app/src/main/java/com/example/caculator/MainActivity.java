@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     SeekBar skg;
     SeekBar skr;
     SeekBar skb;
-    float g,r,b,c,m,y;
+    int g,r,b,c,m,y;
     TextView tvcolorGRB;
     TextView tvcolorTMY;
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 tvcolorGRB.setText("Color RGB: ("+r+", "+g+", "+b+")");
-                tvcolorTMY.setText("Color TMY: ("+c+", "+m+", "+y+")");
+                tvcolorTMY.setText("Color CMY: ("+c+", "+m+", "+y+")");
             }
 
             @Override
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 tvcolorTMY.setBackgroundColor(Color.rgb(c,m,y));
 
                 tvcolorGRB.setText("Color RGB: ("+r+", "+g+", "+b+")");
-                tvcolorTMY.setText("Color TMY: ("+c+", "+m+", "+y+")");
+                tvcolorTMY.setText("Color CMY: ("+c+", "+m+", "+y+")");
             }
 
             @Override
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 tvcolorTMY.setBackgroundColor(Color.rgb(c,m,y));
 
                 tvcolorGRB.setText("Color RGB: ("+r+", "+g+", "+b+")");
-                tvcolorTMY.setText("Color TMY: ("+c+", "+m+", "+y+")");
+                tvcolorTMY.setText("Color CMY: ("+c+", "+m+", "+y+")");
             }
 
             @Override
