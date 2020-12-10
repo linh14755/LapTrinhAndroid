@@ -6,7 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <com.example.baitap3.DrawWithPath
+        android:id="@+id/paintview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-141dp"
+        tools:layout_editor_absoluteY="-30dp" />
+
+    <Button
+        android:id="@+id/tbnclear"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="@+id/paintview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/paintview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        app:layout_constraintBottom_toBottomOf="@+id/paintview"
+        app:layout_constraintEnd_toEndOf="@+id/paintview"
+        app:layout_constraintStart_toStartOf="@+id/paintview"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

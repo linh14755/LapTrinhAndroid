@@ -8,12 +8,16 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 public class DrawWithPath extends View {
     public Paint paint = new Paint();
     public Path path = new Path();
+
 
     public DrawWithPath(Context context) {
         super(context);
@@ -27,6 +31,7 @@ public class DrawWithPath extends View {
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeJoin(Paint.Join.ROUND);
+
     }
 
     @Override
