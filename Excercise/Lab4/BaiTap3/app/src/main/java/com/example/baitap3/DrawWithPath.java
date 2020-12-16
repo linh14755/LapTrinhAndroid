@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class DrawWithPath extends View {
+    public boolean clear = false;
     public Paint paint = new Paint();
     public Path path = new Path();
 
@@ -26,7 +28,6 @@ public class DrawWithPath extends View {
     public DrawWithPath(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        //paint.setAntiAlias(true);
         paint.setStrokeWidth(5f);
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.STROKE);
@@ -57,6 +58,13 @@ public class DrawWithPath extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        //btnclear Click ==> clear = true ==> setColor: black......
+        if (clear) {
+            canvas.drawColor(Color.BLACK);
+            path = new Path();
+        }
+        clear = false;
         canvas.drawPath(path, paint);
     }
 }
